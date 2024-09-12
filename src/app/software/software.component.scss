@@ -1,0 +1,211 @@
+.software-container {
+  //background-image: url('../../assets/imgs/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden; 
+  
+
+  .highlight-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 2;
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.9); // Slight transparency
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px);
+        background-color: #0c0d0f40; // Blue color on hover
+        .card-title, .card-description, .btn {
+          color: #fff; // Change text color to white on hover
+        }
+      }
+
+      .card-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .card-content {
+        flex: 1; // Takes available space
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; // Ensure space between title, description, and buttons
+
+        .card-title {
+          font-size: 1.5rem;
+          margin: 10px 0;
+        }
+
+        .card-description {
+          font-size: 1rem;
+          color: #666;
+        }
+
+        .card-buttons {
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 20px;
+
+          .btn {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            color: #007bff;
+            background-color: #fff;
+
+            &:hover {
+              background-color: #007bff;
+              color: #fff;
+            }
+          }
+
+          .more-btn {
+            background-color: #007bff;
+            color: #fff;
+          }
+
+          .quote-btn {
+            background-color: #28a745;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+// .main-title {
+//   font-size: 2rem;
+//   font-weight: bold;
+//   color: #333;
+// }
+
+// .modal-content {
+//   .modal-header {
+//     background-color: #007bff;
+//     color: white;
+//   }
+
+//   .modal-body {
+//     .form-group {
+//       label {
+//         font-weight: bold;
+//       }
+//     }
+
+//     .btn-primary {
+//       background-color: #007bff;
+//       border: none;
+
+//       &:hover {
+//         background-color: #0056b3;
+//       }
+//     }
+//   }
+// }
+
+
+// /* src/app/software/software.component.scss */
+
+// /* Container for the software cards */
+// .software-container {
+//   display: flex;
+//   flex-wrap: wrap; /* Allows cards to wrap to the next line on smaller screens */
+//   justify-content: center; /* Center the cards horizontally */
+//   gap: 20px; /* Space between the cards */
+//   padding: 20px;
+//   background-color: #f4f4f4; /* Background color for the container */
+// }
+
+// /* Individual software card styling */
+// .software-card {
+//   background-color: #fff; /* White background for the cards */
+//   border-radius: 8px; /* Rounded corners */
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+//   width: 300px; /* Fixed width for consistency */
+//   padding: 20px; /* Padding inside the card */
+//   text-align: center; /* Center text alignment */
+//   transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects for hover */
+
+//   &:hover {
+//     transform: translateY(-5px); /* Slight upward movement on hover */
+//     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+//   }
+
+//   img {
+//     max-width: 100%; /* Ensure the image fits within the card */
+//     height: auto; /* Maintain image aspect ratio */
+//     border-radius: 6px; /* Rounded corners for the image */
+//     margin-bottom: 15px; /* Space below the image */
+//   }
+
+//   h3 {
+//     font-size: 1.5rem; /* Font size for the software name */
+//     margin: 10px 0; /* Margin around the heading */
+//     color: #333; /* Darker color for the heading */
+//   }
+
+//   p {
+//     font-size: 1rem; /* Font size for the description */
+//     margin-bottom: 15px; /* Margin below the description */
+//     color: #555; /* Medium color for the text */
+//   }
+
+//   button {
+//     margin: 5px;
+//     padding: 8px 16px;
+//     background-color: #007bff; /* Primary blue color for buttons */
+//     color: #fff; /* White text color */
+//     border: none;
+//     border-radius: 4px;
+//     font-size: 0.9rem;
+//     cursor: pointer;
+//     transition: background-color 0.3s; /* Smooth transition for hover effect */
+
+//     &:hover {
+//       background-color: #0056b3; /* Darker blue on hover */
+//     }
+
+//     &:first-of-type {
+//       margin-right: 10px; /* Additional margin for the "More" button */
+//     }
+//   }
+// }
+
+// /* Responsive design for smaller screens */
+// @media (max-width: 768px) {
+//   .software-card {
+//     width: 100%; /* Full width on smaller screens */
+//   }
+// }

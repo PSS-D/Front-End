@@ -1,0 +1,21 @@
+<div class="container my-5">
+  <!-- Main Content Title -->
+  <div class="text-center mb-5">
+    <h2 class="main-title">Our service</h2>
+    <p>We know that the Customers are the reason that Our Company exist. That is why we provide the service by doing our best.</p>
+    <!-- <p class="main-description">We offer a range of services to meet your needs.</p> -->
+  </div>
+
+
+  <div class="service-page">
+    <div class="service-container">
+      <div class="service-item" *ngFor="let service of services" (mouseenter)="onMouseEnter(service)" (mouseleave)="onMouseLeave(service)">
+        <div class="service-image">
+          <img [src]="service.imageUrl" [alt]="service.name">
+        </div>
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </div>
+  

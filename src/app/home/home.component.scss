@@ -1,0 +1,194 @@
+// .carousel-container {
+//   margin-top: 0px;
+//   position: relative; 
+// }
+
+
+
+
+
+
+
+// .carousel-item {
+//   height: 95vh; // Adjust the height of the carousel
+//   min-height: 300px; // Ensure a minimum height for smaller screens
+//   background: #333333;
+//   color: white;
+
+//   img {
+//     object-fit: cover;
+//     height: 100%;
+//     width: 100%;
+//     opacity: 0.5;
+//   }
+// }
+
+// .carousel-caption {
+//   background-color: none;
+//   // padding: 20px;
+//   border-radius: 10px;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   text-align: center;
+//   color:white;
+//   width: 100%;  // This ensures the caption takes up the full width of the carousel
+
+//   h5 {
+//     font-size: 3.5rem; // Adjust the size as needed
+//     @media (max-width: 768px) {
+//       font-size: 1.8rem; // Adjust for smaller screens
+//     }
+//   }
+
+//   p {
+//     font-size: 1.2rem; // Adjust the size as needed
+//     @media (max-width: 768px) {
+//       font-size: 1rem; // Adjust for smaller screens
+//     }
+//   }
+
+// }
+
+// h5, p {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   animation: fadeInUp 1s ease-in-out forwards;
+//   animation-delay: 0.5s;  // Delays the start of the animation for h5
+// }
+
+// p {
+//   animation-delay: 1s; // Delays the start of the animation for p
+// }
+
+// @keyframes fadeInUp {
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+
+// // h5{
+// //   text-align: center;
+// //   font-size: 4vw;
+// //   color:rgba(255, 255, 255, 0.936);
+
+
+// // }
+
+
+.carousel-container {
+  margin-top: 0px;
+  position: relative;
+  overflow: hidden; // Ensures no overflow from the images
+
+  .carousel-inner {
+    height: 85vh; // Set the height to 85% of the viewport height
+    min-height: 300px; // Minimum height to ensure visibility on smaller screens
+  }
+
+  .carousel-item {
+    height: 100%; // Ensure each carousel item takes full height of the container
+    background-color: #333333; // Fallback background color
+    color: white;
+    align-items: center;
+    justify-content: center;
+
+
+    img {
+      object-fit: cover; // Ensures the image covers the entire container
+      width: 100%; // Full width
+      height: 100%; // Full height
+      opacity: 0.6; // Slight opacity for a visual effect
+
+
+
+    }
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 15px; // Padding for better appearance on smaller screens
+
+    h5 {
+      font-size: 3.5rem;
+      font-weight: bold;
+
+      @media (max-width: 1200px) {
+        font-size: 2.5rem; // Adjust size on large screens
+      }
+
+      @media (max-width: 768px) {
+        font-size: 1.8rem; // Adjust size on medium screens
+      }
+
+      @media (max-width: 576px) {
+        font-size: 1.5rem; // Adjust size on small screens
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+
+      @media (max-width: 1200px) {
+        font-size: 1rem; // Adjust size on large screens
+      }
+
+      @media (max-width: 768px) {
+        font-size: 0.9rem; // Adjust size on medium screens
+      }
+
+      @media (max-width: 576px) {
+        font-size: 0.8rem; // Adjust size on small screens
+      }
+    }
+  }
+
+  .carousel-indicators {
+    button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      opacity: 0.7;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); // Background color for control icons
+    border-radius: 50%; // Round icons
+  }
+}
+
+// Animation for captions
+h5,
+p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+
+p {
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

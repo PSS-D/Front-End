@@ -1,0 +1,212 @@
+// // Sticky Contact Bar
+// .contact-bar {
+//   background-color: #23272b; // Darker background for contact info
+//   color: #ffffff;
+//   padding: 0.5rem 0;
+//   position: sticky;
+//   top: 0; // Stick to the top of the viewport
+//   z-index: 1020; // Ensure it stays on top of other content
+
+//   .contact-info {
+//     font-size: 1.1rem;
+    
+
+//     a {
+//       color: #bf2c2cc7; // White text color for links
+//       text-decoration: none; // Remove underline from links
+//       font-weight: bold; // Make links bold
+
+//       &:hover {
+//         color: blue; // Light color on hover
+//         text-decoration: underline; // Underline on hover
+//       }
+//     }
+//   }
+// }
+
+// // Custom Navbar Styles
+// .navbar-custom {
+//   background-color:white; // White background for the navbar
+//   padding: 0.5rem 1rem;
+//   position: sticky;
+//   top: 40px; // Adjust based on the height of the contact bar
+//   z-index: 1010; // Ensure it stays under the contact bar but above content
+//   height: 20%;
+
+//   .navbar-brand {
+//     .company-logo {
+//       max-height: 50px; // Adjust logo size
+//     }
+//   }
+
+//   .nav-link {
+//     color: black; // Default text color
+//     position: relative;
+//     padding: 1rem 1.5rem;
+//     text-transform: uppercase;
+//     transition: color 0.3s ease;
+
+//     // Hover effect
+//     &:hover {
+//       color: black; // Text color on hover
+//       text-decoration: none;
+
+//       &::after {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         bottom: -5px;
+//         height: 2px;
+//         width: 100%;
+//         background-color: #1613c7; // Underline color on hover
+//         animation: underline 0.3s ease forwards;
+//       }
+//     }
+
+//     // Default underline
+//     &::after {
+//       content: '';
+//       position: absolute;
+//       left: 0;
+//       bottom: -5px;
+//       height: 2px;
+//       width: 0;
+//       background-color: #1613c7;
+//       transition: width 0.3s ease; // Smooth transition for underline
+//     }
+
+//     // Active state underline
+//     &.active {
+//       color: black; // Text color for active state
+
+//       &::after {
+//         width: 100%; // Full width underline
+//         background-color: #1613c7; // Underline color for active link
+//         animation: none; // Disable animation for active link
+//       }
+//     }
+//   }
+
+//   @keyframes underline {
+//     from {
+//       width: 0;
+//       left: 0;
+//     }
+//     to {
+//       width: 100%;
+//       left: 0;
+//     }
+//   }
+// }
+
+
+// Contact Bar Styles
+.contact-bar {
+  background-color: #23272b; // Darker background for contact info
+    color: #ffffff;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0; // Stick to the top of the viewport
+    z-index: 1020; // Ensure it stays on top of other content
+
+  .contact-info {
+    font-size: 0.9rem;
+
+    a {
+      color: red;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Custom Navbar Styles
+.navbar-custom {
+  background-color: white; // White background for the navbar
+  padding: 0.5rem 1rem;
+  position: sticky;
+  top: 40px; // Adjust based on the height of the contact bar
+  z-index: 1010; // Ensure it stays under the contact bar but above content
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  .navbar-brand {
+    .company-logo {
+      max-height: 50px; // Adjust logo size
+    }
+  }
+
+  .nav-link {
+    color: black; // Default text color
+    position: relative;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+
+    // Hover effect
+    &:hover {
+      color: #1613c7; // Text color on hover
+      text-decoration: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        height: 2px;
+        width: 100%;
+        background-color: #1613c7; // Underline color on hover
+        animation: underline 0.1s ease forwards;
+      }
+    }
+
+    // Default underline
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      height: 2px;
+      width: 0;
+      background-color: #1613c7;
+      transition: width 0.3s ease; // Smooth transition for underline
+    }
+
+    // Active state underline
+    &.active {
+      color: #1613c7; // Text color for active state
+
+      &::after {
+        width: 100%; // Full width underline
+        background-color: #1613c7; // Underline color for active link
+        animation: none; // Disable animation for active link
+      }
+    }
+  }
+
+  @keyframes underline {
+    from {
+      width: 0;
+      left: 0;
+    }
+    to {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .navbar-toggler {
+    border-color: #1613c7;
+
+    .navbar-toggler-icon {
+      background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox%3D"0 0 30 30" xmlns%3D"http://www.w3.org/2000/svg"%3E%3Cpath stroke%3D"rgba%28103, 109, 121, 0.7%29" stroke-width%3D"2" stroke-linecap%3D"round" stroke-miterlimit%3D"10" d%3D"M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+    }
+  }
+}
+html {
+  scroll-behavior: smooth;
+}
+
+

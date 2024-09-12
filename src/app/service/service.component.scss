@@ -1,0 +1,69 @@
+.service-page {
+  padding: 40px;
+  background-color: #f8f9fa;
+
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    
+
+    .service-item {
+      flex: 1 1 calc(25% - 20px); // Four columns on desktop
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        background-color: rgba(0, 123, 255, 0.758); // Change color on hover
+        transform: translateY(-10px); // Move up slightly on hover
+
+        .service-image img {
+          transform: scale(1.1); // Slightly enlarge the image
+        }
+      }
+
+      .service-image {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease-in-out;
+
+
+        img {
+          width: 120px;
+          height: 120px;
+          transition: transform 0.3s ease-in-out;
+          border-radius: 50%;
+          position: relative;
+        }
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: justify;
+      }
+
+      @media (max-width: 992px) {
+        flex: 1 1 calc(33.33% - 20px); // Three columns on tablet size
+      }
+
+      @media (max-width: 768px) {
+        flex: 1 1 calc(50% - 20px); // Two columns on small screens
+      }
+
+      @media (max-width: 576px) {
+        flex: 1 1 100%; // Single column on very small screens
+      }
+    }
+  }
+}

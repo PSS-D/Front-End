@@ -1,0 +1,74 @@
+
+
+<div class="about-section">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <h2 class="main-title">about us</h2>
+      <!-- <p class="as">We know that the Customers are the reason that Our Company exist. That is why we provide the service by doing our best.</p> -->
+      
+    </div> 
+  </div>
+  <div class="about-container " [ngClass]="{'hovered': isHovered('history')}" 
+       (mouseenter)="onHover('history')" (mouseleave)="onLeave()">
+      <div class="text-content left">
+          <h3>Company History</h3>
+          <p>Perfect Software Solutions (Private) Ltd was founded in 2010 Perfect targeted the market which lacks with Quality Software Solutions, read the problem of the client carefully & suggest the best solution with high. Quality Products & Services.<br>
+
+          As the PSS always believes in Quality Solution, clients of PSS were always satisfied with the solutions they received.</p>
+      </div>
+      <div class="image-content right">
+          <img src="assets/imgs/about1.png" alt="Company History">
+      </div>
+  </div>
+
+  <div class="about-container" [ngClass]="{'hovered': isHovered('perfectDo')}" 
+       (mouseenter)="onHover('perfectDo')" (mouseleave)="onLeave()">
+      <div class="image-content left">
+          <img src="assets/imgs/domenico-loia-hGV2TfOh0ns-unsplash.jpg" alt="What Perfect Does">
+      </div>
+      <div class="text-content right">
+          <h3>What Perfect Does</h3>
+          <p>Providing Software Solutions with our Software Products & Services is the main duty of Perfect Software Solutions.
+
+            Payroll, Time & Attendance, HRIS Solutions, Sales Management, Job Costing & Stock Control Solutions are some of our main products and services.
+            
+            Customized Software Development, Software Consultation, Salary Outsourcing. Data Entry Services are also interesting areas that PSS is covering.</p>
+      </div>
+  </div>
+
+  <div class="about-container" [ngClass]="{'hovered': isHovered('mission')}" 
+       (mouseenter)="onHover('mission')" (mouseleave)="onLeave()">
+      <div class="text-content left">
+          <h3>Our Mission</h3>
+          <p>Become leading software provider by selling best quality, highly reliable and
+
+            purely productive software solutions with maximum client satisfaction.</p>
+      </div>
+      <div class="image-content right">
+          <img src="assets/imgs/alesia-kazantceva-VWcPlbHglYc-unsplash.jpg" alt="Our Mission">
+      </div>
+  </div>
+
+  <div class="about-container " [ngClass]="{'hovered': isHovered('vision')}" 
+       (mouseenter)="onHover('vision')" (mouseleave)="onLeave()">
+      <div class="image-content left">
+          <img src="assets/imgs/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg" alt="Our Vision">
+      </div>
+      <div class="text-content right">
+          <h3>Our Vision</h3>
+          <p>Support our clients to get the best out of best with our software solutions and support services, to become more and more productive in their businesses in order to improve their business process, enable the better decision makinga</p>
+      </div>
+  </div>
+
+  <div class="about-container" [ngClass]="{'hovered': isHovered('advantage')}" 
+       (mouseenter)="onHover('advantage')" (mouseleave)="onLeave()">
+      <div class="text-content left">
+          <h3>Competitive Advantage</h3>
+          <p>Proven track record of successful implementations with our quality software & committed service where our competitors find difficulties and failed.</p>
+      </div>
+      <div class="image-content right">
+          <img src="assets/imgs/nastuh-abootalebi-eHD8Y1Znfpk-unsplash.jpg" alt="Competitive Advantage">
+      </div>
+  </div>
+</div>
+

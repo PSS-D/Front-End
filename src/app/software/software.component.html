@@ -1,0 +1,77 @@
+<!-- Software Container--> 
+<div class="container my-5 ">
+ 
+  <div class="text-center mb-5">
+    <h2 class="main-title">Our software</h2>
+    <p>We know that the Customers are the reason that Our Company exist. That is why we provide the service by doing our
+      best.</p>
+  </div>
+
+
+  <div class="software-container ">
+    <div class="highlight-card ">
+      <div class="card  " *ngFor="let software of softwares">
+        <img [src]="software.image" alt="{{ software.title }}" class="card-image">
+        <div class="card-content">
+          <h3 class="card-title">{{ software.title }}</h3>
+          <p class="card-description">{{ software.description }}</p>
+          <div class="card-buttons">
+            <button class="btn more-btn" (click)="goToLink(software.title)">More Details</button>
+            <button class="btn quote-btn" (click)="openQuoteModal(software.title)">Get a Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+Quote Modal
+<div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quoteModalLabel">Request a Quote</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="customerName">Name</label>
+            <input type="text" class="form-control" id="customerName" formControlName="customerName" required>
+          </div>
+          <div class="form-group">
+            <label for="customerEmail">Email</label>
+            <input type="email" class="form-control" id="customerEmail" formControlName="customerEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" class="form-control" id="companyName" formControlName="companyName">
+          </div>
+          <div class="form-group">
+            <label for="contactNumber">Contact Number</label>
+            <input type="text" class="form-control" id="contactNumber" formControlName="contactNumber" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- src/app/software/software.component.html
+<div class="software-container">
+  <div class="software-card" *ngFor="let software of softwareList">
+    <img [src]="software.image" alt="{{ software.name }}">
+    <h3>{{ software.name }}</h3>
+    <p>{{ software.description }}</p>
+    <button (click)="moreInfo(software.id)">More</button>
+    <button (click)="getQuote(software.id)">Get a Quote</button>
+  </div>
+</div> -->

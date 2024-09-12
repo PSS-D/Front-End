@@ -1,0 +1,64 @@
+<div class="client-section">
+  <div class="container my-5">
+    <div class="text-center mb-5">
+      <h2 class="main-title">Our Clients</h2>
+    </div>
+  </div>
+
+  <div class="marquee-container">
+    <div class="marquee-content">
+      <div *ngFor="let image of images" class="marquee-item" (mouseenter)="onHover(image)" (mouseleave)="onLeave()">
+        <img [src]="image.src" [alt]="image.alt" />
+        <span class="company-name" [ngClass]="{'show': hoveredImage === image}">{{ image.companyName }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- //Container for Feedback and Company Details -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Customer Feedback Section -->
+    <div class="col-lg-6 col-md-12">
+      <div class="customer-feedback">
+        <h3 class="text-center">Customer Feedback</h3>
+        <form [formGroup]="feedbackForm" (ngSubmit)="submitFeedback()">
+          <div class="form-group">
+            <label for="feedbackName">Name</label>
+            <input type="text" class="form-control" id="feedbackName" formControlName="name" required>
+          </div>
+          <div class="form-group">
+            <label for="feedbackEmail">Email</label>
+            <input type="email" class="form-control" id="feedbackEmail" formControlName="email" required>
+          </div>
+          <div class="form-group">
+            <label for="feedbackMessage">Message</label>
+            <textarea id="feedbackMessage" class="form-control" formControlName="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Submit Feedback</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Company Details Section -->
+    <div class="col-lg-6 col-md-12">
+      <div class="company-details">
+        <h3 class="text-center">Perfect Software Solution</h3>
+        <div class="details-content">
+          <p><strong>Company Name:</strong> Perfect Software Solution (Pvt) LTD</p>
+          <p><strong>Address:</strong> 44/2A, Galhena Road, Nugegoda, Sri Lanka</p>
+          <p><strong>Phone:</strong> 0112801070</p>
+          <p><strong>Email:</strong> info@psssoftwaresolutions.com</p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+  
+  
+  
+
+
+
+

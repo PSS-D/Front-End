@@ -1,0 +1,165 @@
+.client-section {
+  padding: 60px 0; // Section padding for top and bottom
+
+  .container {
+    max-width: 1200px; // Set a maximum width for the container
+    margin: auto; // Center the container
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 36px; // Standard font size for the topic
+    font-weight: bold;
+    color: #333; // Dark gray color for the title
+    margin-bottom: 20px; // Space below the title
+  }
+}
+
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative; // Relative positioning for proper layout
+  width: 100%;
+  background-color: white;
+}
+
+.marquee-content {
+  display: inline-flex;
+  align-items: center;
+  width: auto; // Width to be 100% to fit the container
+  animation: marquee 200s linear infinite; // Adjust duration as needed
+}
+
+.marquee-content::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 35px;
+  position: relative;
+
+
+  img {
+    max-height: 250px; // Adjust image height as needed
+    width: 175px; // Adjust the size as needed
+    height: auto;
+    margin-bottom: 10px; // Space between image and text
+    border-radius: 5px; // Rounded corners
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+    object-fit: fill;
+  }
+
+  .company-name {
+    font-size: 1rem;
+    color: #333;
+    text-align: center;
+    opacity: 0; // Hidden by default
+    transition: opacity 0.3s ease, transform 0.3s ease; // Add transform transition
+    position: absolute;
+    bottom: -30px; // Position below the image
+    left: 50%;
+    transform: translateX(-50%); // Center horizontally
+    white-space: nowrap; // Prevent text from wrapping to multiple lines
+    margin-top: 10px; // Space between image and text
+    background: #fff; // Background color for better readability
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Optional shadow for better visibility
+    z-index: 1; // Ensure the name appears on top
+
+  }
+
+  &:hover .company-name {
+    opacity: 1; // Show on hover
+    transform: translateY(-22px); // Move the text up slightly on hover
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+
+.customer-feedback,
+.company-details {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.customer-feedback,
+h3.company-details h3 {
+  margin-bottom: 20px;
+}
+
+.customer-feedback .form-group {
+  margin-bottom: 15px;
+}
+
+.customer-feedback .form-control {
+  border-radius: 0.25rem;
+}
+
+.software-container {
+  padding: 20px;
+}
+
+.software-container .software-box {
+  transition: transform 0.3s ease;
+}
+
+.software-container .software-box:hover {
+  transform: scale(1.05);
+}
+
+.software-container .software-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-dialog {
+  max-width: 600px;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header,
+.modal-body {
+  padding: 15px;
+}
+
+.modal-header .close {
+  font-size: 1.5rem;
+}
+
+.company-details .details-content {
+  padding: 15px;
+}
+
+.company-details p {
+  margin-bottom: 10px;
+}
+
+
+
+
